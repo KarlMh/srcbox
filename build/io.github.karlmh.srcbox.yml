@@ -58,9 +58,12 @@ modules:
 
     sources:
       - type: git
-        url: https://github.com/karlmh/srcbox
+        url: https://github.com/KarlMh/srcbox
         tag: v1.0.0
-        # Update commit SHA after tagging:
-        # commit: <sha>
+        commit: 73f199683678211b945e64394ea7d1dac09af1b7
 
-      - build/generated-sources.json
+      - type: file
+        url: https://github.com/KarlMh/srcbox/releases/download/v1.0.0/generated-sources.json
+        sha256: d6b44794842bd2deaa3f64b03632a0cc38ebb5b1ce8df53fce0711e318c8a8c1
+        dest: .
+        dest-filename: generated-sources.json
