@@ -1,0 +1,106 @@
+{
+  "name": "srcbox",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A minimal, local-first markdown notes app",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "electron": "electron .",
+    "electron:dev": "concurrently \"npm run dev\" \"wait-on http://localhost:5173 && electron .\"",
+    "electron:build": "npm run build && electron-builder",
+    "electron:build:linux": "npm run build && electron-builder --linux",
+    "electron:build:flatpak": "npm run build && electron-builder --linux flatpak",
+    "electron:build:mac": "npm run build && electron-builder --mac",
+    "electron:build:win": "npm run build && electron-builder --win",
+    "preview": "vite preview"
+  },
+  "build": {
+    "appId": "com.srcbox.app",
+    "productName": "srcbox",
+    "copyright": "MIT",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "icon": "public/logo.svg",
+    "linux": {
+      "target": [
+        { "target": "flatpak", "arch": ["x64"] },
+        { "target": "AppImage", "arch": ["x64"] },
+        { "target": "deb", "arch": ["x64"] }
+      ],
+      "category": "Utility",
+      "description": "A minimal, local-first markdown notes app",
+      "icon": "public/logo.svg",
+      "desktop": {
+        "Name": "srcbox",
+        "Comment": "Minimal local-first markdown notes",
+        "Categories": "Utility;TextEditor;"
+      }
+    },
+    "flatpak": {
+      "license": "MIT",
+      "runtimeVersion": "23.08",
+      "baseVersion": "23.08",
+      "finishArgs": [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--socket=pulseaudio",
+        "--device=dri",
+        "--filesystem=home",
+        "--share=network"
+      ],
+      "modules": []
+    },
+    "mac": {
+      "target": [
+        { "target": "dmg" },
+        { "target": "zip" }
+      ],
+      "category": "public.app-category.productivity",
+      "icon": "public/logo.svg"
+    },
+    "win": {
+      "target": [
+        { "target": "nsis" }
+      ],
+      "icon": "public/logo.svg"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@vitejs/plugin-react": "^4.3.3",
+    "autoprefixer": "^10.4.27",
+    "concurrently": "^9.2.1",
+    "electron": "latest",
+    "electron-builder": "latest",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^5",
+    "vite": "^5",
+    "vite-plugin-node-polyfills": "^0.22.0",
+    "vite-plugin-pwa": "^0.20.5",
+    "vite-tsconfig-paths": "^4",
+    "wait-on": "^9.0.4"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.2.2",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.7.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^7.13.2",
+    "remark-gfm": "^4.0.1",
+    "zustand": "^5.0.12"
+  }
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.srcbox.app</id>
+
+  <name>srcbox</name>
+  <summary>Minimal local-first markdown notes</summary>
+
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+
+  <description>
+    <p>
+      srcbox is a minimal, offline-first notes app that stores your notes as
+      plain markdown files on your filesystem. No cloud, no accounts, no lock-in.
+    </p>
+    <ul>
+      <li>Write in Markdown with live preview</li>
+      <li>Organize with folders (boxes) and tags</li>
+      <li>Instant autosave to plain .md files</li>
+      <li>Sync across devices using Syncthing</li>
+      <li>Light and dark mode</li>
+    </ul>
+  </description>
+
+  <launchable type="desktop-id">com.srcbox.app.desktop</launchable>
+
+  <url type="homepage">https://github.com/srcbox/srcbox</url>
+  <url type="bugtracker">https://github.com/srcbox/srcbox/issues</url>
+
+  <provides>
+    <binary>srcbox</binary>
+  </provides>
+
+  <categories>
+    <category>Utility</category>
+    <category>TextEditor</category>
+  </categories>
+
+  <keywords>
+    <keyword>notes</keyword>
+    <keyword>markdown</keyword>
+    <keyword>editor</keyword>
+    <keyword>minimal</keyword>
+    <keyword>offline</keyword>
+  </keywords>
+
+  <releases>
+    <release version="1.0.0" date="2026-04-01">
+      <description>
+        <p>Initial release.</p>
+      </description>
+    </release>
+  </releases>
+
+  <content_rating type="oars-1.1"/>
+</component>
