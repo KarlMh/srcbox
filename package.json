@@ -17,7 +17,7 @@
     "preview": "vite preview"
   },
   "build": {
-    "appId": "com.srcbox.app",
+    "appId": "io.github.karlmh.srcbox",
     "productName": "srcbox",
     "copyright": "MIT",
     "directories": {
@@ -25,7 +25,7 @@
     },
     "files": [
       "dist/**/*",
-      "electron/**/*",
+      "electron/*.cjs",
       "package.json"
     ],
     "icon": "public/logo.svg",

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>com.srcbox.app</id>
+  <id>io.github.karlmh.srcbox</id>
 
   <name>srcbox</name>
   <summary>Minimal local-first markdown notes</summary>
@@ -22,10 +22,10 @@
     </ul>
   </description>
 
-  <launchable type="desktop-id">com.srcbox.app.desktop</launchable>
+  <launchable type="desktop-id">io.github.karlmh.srcbox.desktop</launchable>
 
-  <url type="homepage">https://github.com/srcbox/srcbox</url>
-  <url type="bugtracker">https://github.com/srcbox/srcbox/issues</url>
+  <url type="homepage">https://github.com/karlmh/srcbox</url>
+  <url type="bugtracker">https://github.com/karlmh/srcbox/issues</url>
 
   <provides>
     <binary>srcbox</binary>

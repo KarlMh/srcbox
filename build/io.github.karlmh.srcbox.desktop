@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=srcbox
+Comment=Minimal local-first markdown notes
+Exec=srcbox %U
+Icon=io.github.karlmh.srcbox
+Type=Application
+Categories=Utility;TextEditor;
+Keywords=notes;markdown;editor;
+StartupWMClass=srcbox
